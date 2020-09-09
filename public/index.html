@@ -1,306 +1,92 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 
 <head>
-    <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="/css/materialize.min.css" media="screen,projection" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!--Let browser know website is optimized for mobile-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+    <link rel="stylesheet" href="./css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d7ffb23f5d.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-
-    <style>
-        /* Custom Stylesheet */
-        /**
- * Use this file to override Materialize files so you can update
- * the core Materialize files in the future
- *
- * Made By MaterializeCSS.com
- */
-
-        nav ul a,
-        nav .brand-logo {
-            color: #fff;
-        }
-
-        p {
-            line-height: 2rem;
-        }
-
-        .sidenav-trigger {
-            color: #fff;
-        }
-
-        .parallax-container {
-            min-height: 380px;
-            line-height: 0;
-            height: auto;
-            color: rgba(255, 255, 255, .9);
-        }
-
-        .parallax-container .section {
-            width: 100%;
-        }
-
-        @media only screen and (max-width : 992px) {
-            .parallax-container .section {
-                position: absolute;
-                top: 40%;
-            }
-
-            #index-banner .section {
-                top: 10%;
-            }
-        }
-
-        @media only screen and (max-width : 600px) {
-            #index-banner .section {
-                top: 0;
-            }
-        }
-
-        .icon-block {
-            padding: 0 15px;
-        }
-
-        .icon-block .material-icons {
-            font-size: inherit;
-        }
-
-        footer.page-footer {
-            margin: 0;
-        }
-
-        .font-cia {
-            font-family: 'Pacifico', cursive;
-            text-shadow: 0 0 4px #fff;
-        }
-
-        .nav-wrapper .brand-logo img {
-            height: 60px;
-            margin-top: 5px;
-        }
-
-        #form1 {
-            margin-left: 100px;
-        }
-
-        .side-nav li a {
-            text-decoration: none;
-        }
-
-        #searchResults2 {
-            background-color: #FFF;
-        }
-
-        #searchResults {
-            background-color: #FFF;
-        }
-
-        .right li a {
-            padding-right: 2em;
-            text-decoration: none
-        }
-    </style>
-    <nav class="black" role="navigation">
-        <div class="nav-wrapper container">
-            <a id="logo-container" href="/" class="brand-logo ">
-                <img src="./img/logo.png" class="">
-            </a>
-            <ul class="right hide-on-med-and-down">
-                <li><a href="#">Navbar Link</a></li>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+        <a class="navbar-brand" href="#">
+            <img src="./img/logo.png" width="30" height="30" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+            aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search</button>
+        </form>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Disabled</a>
+                </li>
             </ul>
-
-            <ul id="nav-mobile" class="sidenav">
-                <!-- <li><a href="sass.html"><i class="material-icons">search</i></a></li> -->
-                <li><a href="#">Navbar Link</a></li>
-            </ul>
-            <form class=" hide-on-med-and-down" id="form1">
-                <div class="input-field" style="max-width: 400pt;">
-                    <input id="search" type="search" required onkeyup="getBlogs(this.value,0);">
-                    <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-                    <i class="material-icons">close</i>
-                    <div id="searchResults"></div>
-                </div>
-            </form>
-            <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          
         </div>
     </nav>
 
-
-    <div id="index-banner" class="parallax-container">
-        <div class="section no-pad-bot">
-            <div class="container">
-                <br><br>
-                <h1 class="header center text-lighten-2 white-text font-cia">CIA Gamers</h1>
-                <div class="row center">
-                    <h5 class="header col s12 light">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit,
-                        vitae.</h5>
-                </div>
-                <div class="row center">
-                    <a href="http://materializecss.com/getting-started.html" id="download-button"
-                        class="btn-large waves-effect waves-light amber darken-2">Get Started</a>
-                </div>
-                <br><br>
-
-            </div>
-        </div>
-        <div class="parallax"><img src="./img/background1.jpg" alt="Unsplashed background img 1"></div>
-    </div>
-
-    <div class="container">
-        <div class="section">
-
-            <!--   Icon Section   -->
-            <div class="row">
-                <div class="col s12 m4">
-                    <div class="icon-block">
-                        <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
-                        <h5 class="center">Speeds up development</h5>
-
-                        <p class="light">We did most of the heavy lifting for you to provide a default stylings
-                            that
-                            incorporate our custom components. Additionally, we refined animations and
-                            transitions to
-                            provide a smoother experience for developers.</p>
-                    </div>
-                </div>
-
-                <div class="col s12 m4">
-                    <div class="icon-block">
-                        <h2 class="center brown-text"><i class="material-icons">group</i></h2>
-                        <h5 class="center">User Experience Focused</h5>
-
-                        <p class="light">By utilizing elements and principles of Material Design, we were able
-                            to create
-                            a framework that incorporates components and animations that provide more feedback
-                            to users.
-                            Additionally, a single underlying responsive system across all platforms allow for a
-                            more
-                            unified user experience.</p>
-                    </div>
-                </div>
-
-                <div class="col s12 m4">
-                    <div class="icon-block">
-                        <h2 class="center brown-text"><i class="material-icons">settings</i></h2>
-                        <h5 class="center">Easy to work with</h5>
-
-                        <p class="light">We have provided detailed documentation as well as specific code
-                            examples to
-                            help new users get started. We are also always open to feedback and can answer any
-                            questions
-                            a user may have about Materialize.</p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-
-    <div class="parallax-container valign-wrapper">
-        <div class="section no-pad-bot">
-            <div class="container">
-                <div class="row center">
-                    <h5 class="header col s12 light">A modern responsive front-end framework based on Material
-                        Design
-                    </h5>
-                </div>
-            </div>
-        </div>
-        <div class="parallax"><img src="./img/background2.jpg" alt="Unsplashed background img 2"></div>
-    </div>
-
-    <div class="container">
-        <div class="section">
-
-            <div class="row">
-                <div class="col s12 center">
-                    <h3><i class="mdi-content-send brown-text"></i></h3>
-                    <h4>Contact Us</h4>
-                    <p class="left-align light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-                        scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna
-                        fermentum ac. Cras ut ultricies eros. Maecenas eros justo, ullamcorper a sapien id,
-                        viverra
-                        ultrices eros. Morbi sem neque, posuere et pretium eget, bibendum sollicitudin lacus.
-                        Aliquam
-                        eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie.
-                        Morbi
-                        massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget dignissim
-                        mauris, non
-                        tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
-                        cubilia
-                        Curae;</p>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-
-    <div class="parallax-container valign-wrapper">
-        <div class="section no-pad-bot">
-            <div class="container">
-                <div class="row center">
-                    <h5 class="header col s12 light">Sua moderna e favorita loja de artigos <span
-                            class="font-cia">GAMERS</span>!
-                    </h5>
-                </div>
-            </div>
-        </div>
-        <div class="parallax"><img src="./img/background3.jpg" alt="Unsplashed background img 3"></div>
-    </div>
-
-    <footer class="page-footer black">
+    <div class="jumbotron jumbotron-fluid mb-0"
+        style=" background-repeat: no-repeat; background-position: center; background:  url('./img/background3.jpg');">
         <div class="container">
-            <div class="row">
-                <div class="col l6 s12">
-                    <h5 class="white-text">Company Bio</h5>
-                    <p class="grey-text text-lighten-4">We are a team of college students working on this
-                        project like
-                        it's our full time job. Any amount would help support and continue development on this
-                        project
-                        and is greatly appreciated.</p>
+            <h1 class="display-4 font-cia text-white">CIA Gamers</h1>
+            <p class="lead text-white pt-2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere, molestias!
+            </p>
 
+        </div>
+    </div>
+    <div class="bg-green">
+        <div class="container">
 
-                </div>
-                <div class="col l3 s12">
-                    <h5 class="white-text">Settings</h5>
-                    <ul>
-                        <li><a class="white-text" href="#!">Link 1</a></li>
-                        <li><a class="white-text" href="#!">Link 2</a></li>
-                        <li><a class="white-text" href="#!">Link 3</a></li>
-                        <li><a class="white-text" href="#!">Link 4</a></li>
-                    </ul>
-                </div>
-                <div class="col l3 s12">
-                    <h5 class="white-text">Connect</h5>
-                    <ul>
-                        <li><a class="white-text" href="#!">Link 1</a></li>
-                        <li><a class="white-text" href="#!">Link 2</a></li>
-                        <li><a class="white-text" href="#!">Link 3</a></li>
-                        <li><a class="white-text" href="#!">Link 4</a></li>
-                    </ul>
+            <div class="row pb-3 pt-3">
+                <div class="col">
+                    <div class="media">
+                        <img class="align-self-center mr-3"
+                            src="https://images.tcdn.com.br/795279/themes/3//img/settings/card_1.png?461186364fd4bbd0b38417343b54294f"
+                            alt="Generic placeholder image">
+                        <div class="media-body">
+                            <h5 class="mt-0">Center-aligned media</h5>
+
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="footer-copyright">
-            <div class="container center-align">
-                Made by EquipeDev
-            </div>
-        </div>
-    </footer>
 
-    <!--JavaScript at end of body for optimized loading-->
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="/js/materialize.min.js"></script>
-    <script src="./js/init.js"></script>
+    </div>
+
+    <h1>Hello, world!</h1>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

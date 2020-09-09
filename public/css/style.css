@@ -1,0 +1,12 @@
+.bg-black {
+    background-color: rgb(0, 22, 4);
+}
+
+.font-cia {
+    font-family: 'Pacifico', cursive;
+    text-shadow: 0 0 4px #fff;
+}
+
+.bg-green {
+    background-color: rgb(120, 194, 133);
+}
