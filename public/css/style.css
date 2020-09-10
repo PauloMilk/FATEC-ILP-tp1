@@ -1,12 +1,19 @@
 .bg-black {
-    background-color: rgb(0, 22, 4);
+  background-color: rgb(120, 194, 133);
 }
 
 .font-cia {
-    font-family: 'Pacifico', cursive;
-    text-shadow: 0 0 4px #fff;
+  font-family: "Pacifico", cursive;
+  text-shadow: 0 0 4px #fff;
 }
 
 .bg-green {
-    background-color: rgb(120, 194, 133);
+  background-color: rgb(120, 194, 133);
+}
+
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
